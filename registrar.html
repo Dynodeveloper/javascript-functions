@@ -21,7 +21,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand text-light bg-dark " href="#">Ci-Noticias</a>
+            <a class="navbar-brand text-light bg-dark " href="../index.html">Ci-Noticias</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active text-light bg-dark" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active text-light bg-dark" aria-current="page" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light bg-dark" href="../registrar.html">Registrar Noticia</a>
@@ -71,30 +71,36 @@
             <div class="col-2"></div>
             <div class="col-8">
                 <div class="card">
-                    <div class="card-header bg-dark">
+                    <div class="card-header bg-light">
                         <h2 class="text-info text-center">Formulario News</h2>
                     </div>
                     <div class="card-body">
                         <form>
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                <label for="exampleInputEmail1" class="form-label">Titulo</label>
+                                <input type="text" class="form-control" required id="title"
                                     aria-describedby="emailHelp">
-                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                <div id="emailHelp" class="form-text">Crea un titulo llamativo para la noticia
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                <label for="exampleInputPassword1" class="form-label">Contenido</label>
+                                <textarea name="" required id="content" cols="100" rows="10" class="form-control"></textarea>
                             </div>
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            <div class="mb-3">
+                                <label for="">Estado</label>
+                                <select name="" required id="status" class="form-control">
+                                    <option value="">--Default--</option>
+                                    <option value="">Activo</option>
+                                    <option value="">Inactivo</option>
+                                </select>
                             </div>
-                            <button type="submit" class="btn btn-info bg-dark text-info">Submit</button>
                         </form>
                     </div>
-                    <div class="card-footer"></div>
+                    <div class="card-footer text-center">
+                        <button type="submit" class="btn btn-info bg-dark text-info">Subir</button>
+                    </div>
+
                 </div>
             </div>
         </div>

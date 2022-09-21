@@ -1,3 +1,6 @@
 .img{
     width: 400px;
 }
+.form-control textarea{
+    resize: none;
+}
