@@ -4,3 +4,6 @@
 .form-control textarea{
     resize: none;
 }
+#boton{
+    width: 200px;
+}

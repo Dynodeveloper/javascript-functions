@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- CSS only -->
-        <link rel="stylesheet" href="../vistas/vistas.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-        <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-            crossorigin="anonymous"></script>
-        <title>CI-NEWS</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="../CI-NEWS/vistas/vistas.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <title>CI-NEWS</title>
+</head>
 
 <body>
     <nav class="navbar navbar-expand-lg bg-dark">
@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active text-light bg-dark" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active text-light bg-dark" aria-current="page" href="../CI-NEWS/index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light bg-dark" href="../CI-NEWS/registrar.html">Registrar Noticia</a>
@@ -78,8 +78,11 @@
                         <form>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Titulo</label>
-                                <input type="text" class="form-control" required id="title"
-                                    aria-describedby="emailHelp">
+                                <input type="text" class="form-control" required id="title">
+                                <div class="container bg-info" id="message-Error-Title" style="display: none;">
+                                    <p class="text-black">Este campo no puede estar vacio</p>
+                                </div>
+
                                 <div id="emailHelp" class="form-text">Crea un titulo llamativo para la noticia
                                 </div>
                             </div>
@@ -87,6 +90,9 @@
                                 <label for="exampleInputPassword1" class="form-label">Contenido</label>
                                 <textarea name="" required id="content" cols="100" rows="10"
                                     class="form-control"></textarea>
+                                <div class="container bg-info" id="message-Error-content" style="display: none;">
+                                    <p class="text-black">Este campo no puede estar vacio</p>
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <label for="">Estado</label>
@@ -94,19 +100,69 @@
                                     <option value="0">--Default--</option>
                                     <option value="1">Activo</option>
                                     <option value="2">Inactivo</option>
-
                                 </select>
+                            </div>
+                            <div class="container bg-info" id="message-Error-status" style="display: none;">
+                                <p id="boton" class="text-black">Este campo no puede estar vacio</p>
                             </div>
                         </form>
                     </div>
                     <div class="card-footer text-center">
-                        <button type="submit" class="btn btn-info bg-white text-info">Subir</button>
+                        <button id="boton" type="button" class="btn btn-info bg-white text-info "
+                            onclick="SaveData()">Subir</button>
                     </div>
 
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
 
 </body>
 
@@ -126,6 +182,27 @@
         console.log(titulo);
         console.log(Contenido);
         console.log(Estado);
+
+        if (titulo == undefined || titulo == null || titulo == '') {
+            $('#message-Error-Title').show();
+        } else {
+            $('#message-Error-Title').hide();
+        }
+        if (Contenido == undefined || Contenido == null || Contenido == '') {
+            $('#message-Error-content').show();
+        } else {
+            $('#message-Error-content').hide();
+        }
+        if (Estado == undefined || Estado == null || Estado == 0) {
+            $('#message-Error-status').show();
+        } else {
+            $('#message-Error-status').hide();
+        }
+
+
+
+
+
         //javascript
         titulo = document.getElementById('title').value;
         console.log('javascript' + titulo);
