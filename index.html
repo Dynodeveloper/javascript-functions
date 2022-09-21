@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+/*suma de numeros*/
+        function sum(num1, num2) {
+            suma = num1 + num2, console.log('el resultado es: ' + suma)
+        }
+/*raiz de dos numeros*/        
+        function raiz(num1, num2) {
+            raiz1=Math. sqrt(num1),  raiz2=Math. sqrt(num2), console.log('las raices son: '+raiz1+' , '+raiz2)
+        }
+/*generar numeros aleatorios*/        
+        function random(){
+            const rand = 10
+            for(let i = 0; i < rand; i++){
+                x = Math.ceil(Math.random()*100);
+
+                console.log('numero:'+x)
+            }
+        }
+
+/*decidir eliminar numero*/
+        function del(num1,num2){
+            console.log('¿que numero desea eliminar?')
+            conf=prompt()
+            if(prompt=num1){
+                delete num1
+            }else if(prompt=num2){
+                delete num2
+            }else{console.log('el numero que digitó no existe')}
+        
+            console.log('el numero que elimino fue: '+conf) 
+        }  
+/*contador de arreglos*/
+
+     let arr = new Array(1,2,3,4,5)
+     let arr2 = new Array(1,2,3,4,5,6,7,8)
+
+        function counter(array){
+            console.log('el tamaño de su arreglo es: '+array.length)
+        }
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
