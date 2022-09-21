@@ -135,7 +135,7 @@
 
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary">
+    <button type="button" class="btn btn-primary" id="bt_1" style="visibility: hidden;" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Launch demo modal
     </button>
 
@@ -148,7 +148,14 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <img src="http://pm1.narvii.com/7937/957d12f289add03056fd29b45d2970b9d5efdee7r1-480-480v2_uhq.jpg" alt="">
+                        </div>
+                        <div class="col-12 text-center">
+                            <h3>DATOS CAPTURADOS</h3>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -185,27 +192,27 @@
 
         if (titulo == undefined || titulo == null || titulo == '') {
             $('#message-Error-Title').show();
+            return false;
         } else {
             $('#message-Error-Title').hide();
         }
         if (Contenido == undefined || Contenido == null || Contenido == '') {
             $('#message-Error-content').show();
+            return false;
         } else {
             $('#message-Error-content').hide();
         }
         if (Estado == undefined || Estado == null || Estado == 0) {
             $('#message-Error-status').show();
+            return false;
         } else {
             $('#message-Error-status').hide();
         }
 
 
+        $('#bt_1').click();
 
 
-
-        //javascript
-        titulo = document.getElementById('title').value;
-        console.log('javascript' + titulo);
 
     }
 </script>
