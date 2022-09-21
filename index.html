@@ -5,60 +5,137 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="../vistas/vistas.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-
-    <script type="text/javascript">
-
-/*suma de numeros*/
-        function sum(num1, num2) {
-            suma = num1 + num2, console.log('el resultado es: ' + suma)
-        }
-/*raiz de dos numeros*/        
-        function raiz(num1, num2) {
-            raiz1=Math. sqrt(num1),  raiz2=Math. sqrt(num2), console.log('las raices son: '+raiz1+' , '+raiz2)
-        }
-/*generar numeros aleatorios*/        
-        function random(){
-            const rand = 10
-            for(let i = 0; i < rand; i++){
-                x = Math.ceil(Math.random()*100);
-
-                console.log('numero:'+x)
-            }
-        }
-
-/*decidir eliminar numero*/
-        function del(num1,num2){
-            console.log('¿que numero desea eliminar?')
-            conf=prompt()
-            if(prompt=num1){
-                delete num1
-            }else if(prompt=num2){
-                delete num2
-            }else{console.log('el numero que digitó no existe')}
-        
-            console.log('el numero que elimino fue: '+conf) 
-        }  
-/*contador de arreglos*/
-
-     let arr = new Array(1,2,3,4,5)
-     let arr2 = new Array(1,2,3,4,5,6,7,8)
-
-        function counter(array){
-            console.log('el tamaño de su arreglo es: '+array.length)
-        }
-
-
-
-
-    </script>
-
+    <title>CI-NEWS</title>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light bg-dark " href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light bg-dark" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light bg-dark" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light bg-dark" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
 
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-info text-light bg-dark" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-bg-dark p-3">Hola Mundo</h5>
+                        <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est fugiat
+                            possimus sequi voluptatum ipsam impedit molestiae esse aliquam dolores recusandae?</p>
+                        <a href="#" class="btn btn-info text-bg-dark p-3">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-bg-dark p-3">Hola Mundo</h5>
+                        <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore possimus
+                            earum animi ea quam. Repellat dicta odio ullam aut? Optio.</p>
+                        <a href="#" class="btn btn-info text-bg-dark p-3">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-bg-dark p-3">Hola Mundo</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam consequatur
+                            id reprehenderit mollitia et ipsam alias illo nihil facere dolore!</p>
+                        <a href="#" class="btn btn-info text-bg-dark p-3">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3>Prueba de titulo</h3>
+            </div>
+            <div class="col12 text-center">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, vitae. Earum officia totam
+                    repudiandae placeat numquam quibusdam rerum corrupti necessitatibus obcaecati neque nemo, impedit ea
+                    doloremque commodi, dicta assumenda doloribus. Voluptates autem doloremque cupiditate quae et eum
+                    nisi magni hic placeat eos nulla cum facilis ipsa nihil voluptatibus, repellendus ullam nesciunt
+                    reiciendis deleniti consequuntur obcaecati quibusdam accusantium enim mollitia! Vel beatae quis
+                    laboriosam delectus, quaerat veniam quia suscipit ab, totam eveniet, aperiam nobis ipsam animi
+                    maxime sint odit accusantium reprehenderit veritatis! Dolores voluptatibus quam dignissimos facere
+                    temporibus. Facilis fugiat doloremque ipsam sit laborum dicta vitae totam hic, voluptatem tenetur
+                    quasi.
+                </p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-6">
+                <img class="img" src="https://noticiasya.com.co/wp-content/uploads/2018/04/Logo-noticias-ya-02.png"
+                    alt="" class="img_center">
+            </div>
+            <div class="col-6">
+                <h3 class="tittle-section">TITULO SECCION</h3>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum necessitatibus, illum saepe ex pariatur
+                    soluta commodi doloremque sapiente quas nesciunt perferendis dolore id eligendi odio voluptatem!
+                    Deserunt laudantium ullam quasi esse id neque quam repellat quas qui impedit unde exercitationem
+                    eligendi fugit cum veniam eius perspiciatis sit, delectus harum optio sunt. Praesentium laudantium
+                    modi enim. Eveniet reprehenderit eos deserunt voluptatum sunt consectetur voluptate reiciendis est
+                    molestiae cupiditate, doloremque, labore nihil repudiandae culpa voluptatibus omnis, vero sint ab
+                    eum blanditiis? Dicta, deserunt animi aliquid rem voluptate maxime. Expedita eveniet esse nihil
+                    doloribus accusamus repellendus similique commodi, et fugit, fugiat id aut.</P>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
 </body>
+<footer class="bg-light">
+    <div class="container2 text-center">
+        <h2 class="text-light bg-dark">SENA 2022</h2>
+    </div>
+</footer>
 
 </html>
